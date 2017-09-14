@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>exercice-contacts-servlet-jsp</display-name>
+
+
+
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>be.steformations.it.javaweb.contacts.tests.TestDaoSpringJdbc</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>controleur</servlet-name>
+		<servlet-class>be.steformations.it.javaweb.contacts.controleurs.ControleurIndex</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>controleur</servlet-name>
+		<url-pattern>/controleur</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>tag</servlet-name>
+		<servlet-class>be.steformations.it.javaweb.contacts.controleurs.ControleurTags</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>tag</servlet-name>
+		<url-pattern>/tag</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>contact</servlet-name>
+		<servlet-class>be.steformations.it.javaweb.contacts.controleurs.ControleurContacts</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>contact</servlet-name>
+		<url-pattern>/contact</url-pattern>
+	</servlet-mapping>	
+		
+	<servlet>
+		<servlet-name>pays</servlet-name>
+		<servlet-class>be.steformations.it.javaweb.contacts.controleurs.ControleurPays</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>pays</servlet-name>
+		<url-pattern>/pays</url-pattern>
+	</servlet-mapping>	
+
+
+</web-app>
