@@ -28,6 +28,9 @@ public class ControleurContacts extends javax.servlet.http.HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
 		this.dataSource = new org.springframework.jdbc.datasource.SingleConnectionDataSource(
+	//SingleConnectionDataSource car dans le ContactsManager, l'opération createAndSaveContact comporte un try-catch
+	// avec commit et rollback qui fait qu'il vaut mieux privilégier une connexion unique (SingleConnectionDataSource) par rapport à plusieurs connexions 
+	// (DriverManagerDataSource) car lors d'un create contacts, on perd l'affichage de la liste des contacts sinon.			
 		"jdbc:postgresql://localhost/contacts","postgres", "postgres", false);	
 		try {
 			//chargement du driver jdbc pour qu'il s'enregistre auprès du driver manager		
